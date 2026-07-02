@@ -483,7 +483,8 @@
     '<span class="t-sky">      ██║  ███╔╝ </span>   <span class="t-pink">role</span>    Principal Software Engineer',
     '<span class="t-sky"> ██   ██║ ███╔╝  </span>   <span class="t-pink">org</span>     FTS × Restaurant365',
     '<span class="t-sky"> ╚█████╔╝███████╗</span>   <span class="t-pink">base</span>    Nablus, Palestine',
-    '<span class="t-sky">  ╚════╝ ╚══════╝</span>   <span class="t-pink">stack</span>   .NET · Spring · SQL · AWS',
+    '<span class="t-sky">  ╚════╝ ╚══════╝</span>   <span class="t-pink">stack</span>   .NET · K8s · Azure · SQL',
+    '                     <span class="t-pink">leads</span>   architecture council · 6 teams',
     '                     <span class="t-pink">focus</span>   Platform Architecture · Agentic AI',
     '                     <span class="t-pink">uptime</span>  coding since 2018, shipping since day 1',
   ].join("\n");
@@ -514,7 +515,7 @@
     neofetch: () => tPrint(NEOFETCH),
     skills: () =>
       tPrint(
-        '<span class="t-sky">langs</span>      C# · Java · Python · JS · SQL · C++\n<span class="t-sky">backend</span>    .NET Core · Spring Boot · REST · JWT/OAuth2 · EF Core · JPA\n<span class="t-sky">arch</span>       Clean Architecture · DDD · Microservices · System Design\n<span class="t-sky">data</span>       SQL Server · PostgreSQL · Oracle · Redis\n<span class="t-sky">infra</span>      AWS · Docker · CI/CD · RabbitMQ · Nginx · Linux\n<span class="t-sky">ai/ml</span>      TensorFlow · PyTorch · OpenCV · CNNs · Agentic systems'
+        '<span class="t-sky">langs</span>      C# · Java · Python · JS · SQL · C++\n<span class="t-sky">backend</span>    ASP.NET Core 9 · Minimal APIs · Spring Boot · MediatR · Refit · EF Core\n<span class="t-sky">arch</span>       Clean Architecture · DDD · Event-Driven · Microservices · API Gateway\n<span class="t-sky">data</span>       SQL Server · PostgreSQL · Oracle · Redis\n<span class="t-sky">infra</span>      Kubernetes · AKS · ArgoCD · Azure · AWS · Docker · GitLab CI/CD\n<span class="t-sky">observe</span>    OpenTelemetry · Elasticsearch · Kibana · tracing\n<span class="t-sky">ai/ml</span>      Agentic agents · AI dev tooling · TensorFlow · PyTorch · OpenCV · CNNs'
       ),
     experience: () =>
       tPrint(

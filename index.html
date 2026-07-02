@@ -229,8 +229,9 @@
             <p>
               I went from backend intern to principal in under four years — not by accident, but by owning harder
               problems at every step: business-critical payroll workflows, cross-domain migration strategy, and
-              architecture decisions that outlive any single sprint. As <strong>Payroll Backend Liaison on the
-              Architecture Council</strong>, I represented an entire domain in company-wide technical direction.
+              architecture decisions that outlive any single sprint. As Principal Engineer I <strong>founded and run
+              a weekly architecture council</strong> spanning six engineering teams — where cross-team architecture,
+              data-model and integration decisions get surfaced early and unblocked fast.
             </p>
             <p>
               Outside the day job, I co-founded <strong>HEARIZE</strong> — a mobile app that translates sign language
@@ -257,6 +258,8 @@
   - backend-systems
   - platform-architecture
   - distributed-systems
+<span class="y-key">leads</span>: architecture-council · 6 teams
+<span class="y-key">stack</span>: [.net, k8s, azure, sql]
 <span class="y-key">current_focus</span>: <span class="y-hot">agentic-ai</span>
 <span class="y-key">languages</span>:
   <span class="y-key">arabic</span>: native
@@ -293,13 +296,13 @@
                 </div>
               </header>
               <p>
-                Senior technical leader across multiple teams in a broad product area — shaping architecture,
-                influencing technical strategy, and driving scalable, resilient solutions. Leading cross-team
-                alignment on complex initiatives, resolving high-impact dependencies, and raising the bar for
-                architectural quality and execution.
+                Engineering lead for a <strong>six-team mission group</strong>. Founded and run a weekly
+                architecture council; own cross-team architecture, data-model and integration decisions, and
+                unblock teams fast — turning around high-impact design calls within a day. My job is to reduce
+                architectural ambiguity and keep delivery technically coherent across every team.
               </p>
               <ul class="tag-row mono">
-                <li>Architecture</li><li>Tech Strategy</li><li>Cross-team Leadership</li><li>Platform</li>
+                <li>Architecture Council</li><li>Cross-team Leadership</li><li>Platform</li><li>Distributed Systems</li><li>Agentic AI</li>
               </ul>
             </div>
           </article>
@@ -316,13 +319,13 @@
                 <div class="tl-meta mono"><span class="tl-date">Jul 2025 — May 2026</span></div>
               </header>
               <p>
-                Shaped critical architecture in the Payroll domain — complex payroll workflows, systems alignment,
-                migration strategy and platform improvements across <strong>6 cross-functional teams</strong>.
-                Served as <strong>Payroll Backend Liaison on the Architecture Council</strong>, representing the domain
-                in company-wide technical decisions.
+                Shaped critical payroll platform architecture across <strong>6 cross-functional teams</strong>.
+                Designed an <strong>event-driven multi-position sync</strong> that prevents incorrect earnings
+                aggregation and preserves job-level traceability, drove migration strategy, and led performance
+                RCAs on high-throughput payroll APIs. Represented the domain on the architecture council.
               </p>
               <ul class="tag-row mono">
-                <li>.NET Core</li><li>SQL Server</li><li>Migration Strategy</li><li>Architecture Council</li>
+                <li>.NET Core</li><li>Event-Driven</li><li>MediatR</li><li>SQL Server</li><li>Migration Strategy</li>
               </ul>
             </div>
           </article>
@@ -458,15 +461,50 @@
               <span class="project-icon" aria-hidden="true">🧮</span>
               <span class="tag mono">enterprise</span>
             </div>
-            <h3>Payroll Platform Architecture</h3>
+            <h3>Payroll Platform &amp; Multi-Position Sync</h3>
             <p class="project-tagline">Where correctness is non-negotiable.</p>
             <p>
-              Architecture and evolution of Restaurant365's payroll backend — complex workflows, migration
-              strategy and platform improvements spanning 6 cross-functional teams, with a seat on the
-              Architecture Council.
+              Core architecture for a high-throughput payroll platform: an <strong>event-driven multi-position
+              sync</strong> that prevents incorrect earnings aggregation and preserves job-level traceability,
+              plus migration strategy and performance RCAs on business-critical payroll APIs — across
+              6 cross-functional teams.
             </p>
             <ul class="tag-row mono">
-              <li>.NET Core</li><li>SQL Server</li><li>Spring Boot</li><li>PostgreSQL</li><li>Microservices</li>
+              <li>.NET Core</li><li>Event-Driven</li><li>MediatR</li><li>SQL Server</li><li>Refit</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tilt>
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🧩</span>
+              <span class="tag mono">platform</span>
+            </div>
+            <h3>Platform, Gateway &amp; Integration</h3>
+            <p class="project-tagline">The glue between services.</p>
+            <p>
+              API gateway and <strong>reverse-proxy routing (YARP)</strong>, auth boundaries and header
+              propagation, and domain-safe contracts across services — the connective tissue that keeps a
+              distributed backend coherent, observable and secure.
+            </p>
+            <ul class="tag-row mono">
+              <li>YARP</li><li>API Gateway</li><li>Kubernetes</li><li>OpenTelemetry</li><li>Azure</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tilt>
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🤖</span>
+              <span class="tag mono">agentic ai</span>
+            </div>
+            <h3>Agentic AI &amp; Engineering Tooling</h3>
+            <p class="project-tagline">Autonomous systems that accelerate teams.</p>
+            <p>
+              Internal <strong>AI agents and reusable engineering skills</strong> that automate investigation and
+              diagnostics, plus developer tooling — an on-demand configuration bot on Kubernetes (ASP.NET Core
+              Minimal API) — that removes friction for whole teams.
+            </p>
+            <ul class="tag-row mono">
+              <li>Agentic AI</li><li>ASP.NET Core 9</li><li>Kubernetes</li><li>Automation</li>
             </ul>
           </article>
 
@@ -522,9 +560,9 @@
           <div class="core-chips">
             <span class="chip-core mono">C#</span>
             <span class="chip-core mono">.NET Core</span>
+            <span class="chip-core mono">ASP.NET Core</span>
             <span class="chip-core mono">SQL Server</span>
-            <span class="chip-core mono">Spring Boot</span>
-            <span class="chip-core mono">PostgreSQL</span>
+            <span class="chip-core mono">Kubernetes</span>
             <span class="chip-core mono">Docker</span>
           </div>
         </div>
@@ -539,13 +577,13 @@
           <div class="skill-group reveal" data-tilt>
             <h3 class="mono"><span aria-hidden="true">🔌</span> Backend &amp; APIs</h3>
             <div class="skill-chips">
-              <span>ASP.NET Core</span><span>Spring Boot</span><span>REST Design</span><span>JWT / OAuth2</span><span>EF Core</span><span>JPA</span><span>Background Services</span>
+              <span>ASP.NET Core 9</span><span>Minimal APIs</span><span>Spring Boot</span><span>REST Design</span><span>MediatR</span><span>Refit</span><span>Mapperly</span><span>EF Core</span><span>JPA</span><span>JWT / OAuth2</span><span>xUnit · Moq</span>
             </div>
           </div>
           <div class="skill-group reveal" data-tilt>
             <h3 class="mono"><span aria-hidden="true">🏛️</span> Architecture</h3>
             <div class="skill-chips">
-              <span>Clean Architecture</span><span>DDD</span><span>Microservices</span><span>Modular Monoliths</span><span>System Design</span><span>SOLID</span><span>Distributed Systems</span>
+              <span>Clean Architecture</span><span>DDD</span><span>Event-Driven</span><span>Microservices</span><span>Modular Monoliths</span><span>API Gateway</span><span>System Design</span><span>SOLID</span><span>Distributed Systems</span>
             </div>
           </div>
           <div class="skill-group reveal" data-tilt>
@@ -557,13 +595,25 @@
           <div class="skill-group reveal" data-tilt>
             <h3 class="mono"><span aria-hidden="true">☁️</span> Cloud &amp; DevOps</h3>
             <div class="skill-chips">
-              <span>AWS</span><span>Docker</span><span>CI/CD — GitHub &amp; GitLab</span><span>RabbitMQ</span><span>Nginx</span><span>IIS</span><span>Linux</span>
+              <span>Kubernetes · Helm</span><span>AKS</span><span>ArgoCD (GitOps)</span><span>Azure</span><span>AWS</span><span>Docker</span><span>CI/CD — GitLab &amp; GitHub</span><span>Azure Key Vault</span><span>RabbitMQ</span><span>Linux</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">📡</span> Observability</h3>
+            <div class="skill-chips">
+              <span>OpenTelemetry</span><span>Distributed Tracing</span><span>Elasticsearch</span><span>Kibana</span><span>Structured Logging</span><span>Metrics &amp; Alerting</span>
             </div>
           </div>
           <div class="skill-group reveal" data-tilt>
             <h3 class="mono"><span aria-hidden="true">🧠</span> AI &amp; ML</h3>
             <div class="skill-chips">
-              <span>Agentic AI Systems</span><span>TensorFlow</span><span>PyTorch</span><span>OpenCV</span><span>CNNs</span><span>On-device Inference</span>
+              <span>Agentic AI Systems</span><span>Autonomous Dev Agents</span><span>AI Dev Tooling</span><span>TensorFlow</span><span>PyTorch</span><span>OpenCV</span><span>CNNs</span><span>On-device Inference</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">🎨</span> Frontend</h3>
+            <div class="skill-chips">
+              <span>React</span><span>JavaScript</span><span>HTML5 &amp; CSS3</span><span>Responsive UI</span><span>Dashboards</span>
             </div>
           </div>
         </div>

@@ -4,6 +4,6 @@
 # Local tooling
 .claude/
 
-# Source documents (not part of the site)
+# Source materials — CV, LinkedIn export, original photo (not part of the site)
+_source/
 *.pdf
-/jihad.jpg

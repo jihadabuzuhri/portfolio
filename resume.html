@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résumé — Jihad Abu Zuhri · Principal Software Engineer</title>
+  <meta name="description" content="Résumé of Jihad Abu Zuhri — Principal Software Engineer. Backend systems, platform architecture, distributed systems, agentic AI." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #16192a;
+      --soft: #4b5268;
+      --faint: #8a91a6;
+      --accent: #4f46e5;
+      --accent2: #0284c7;
+      --line: #e4e7f0;
+      --chipbg: #f3f5fb;
+      --grad: linear-gradient(100deg, #0ea5e9, #6366f1 55%, #db2777);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eef0f6;
+      color: var(--ink);
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 14.2px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mono { font-family: "JetBrains Mono", monospace; }
+
+    /* Toolbar (screen only) */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px clamp(16px, 4vw, 40px);
+      background: #0a0f1e;
+      color: #e8ecf8;
+    }
+    .toolbar a, .toolbar button {
+      font: 600 13.5px "Inter", sans-serif;
+      color: #e8ecf8;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 9px 18px;
+      border-radius: 9px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .toolbar a:hover, .toolbar button:hover { background: rgba(255, 255, 255, 0.16); transform: translateY(-1px); }
+    .toolbar .dl { background: var(--grad); border: 0; }
+    .toolbar-note { font-size: 12px; color: #93a0ba; }
+
+    /* Page */
+    .page {
+      max-width: 850px;
+      margin: 28px auto 60px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 24px 70px rgba(20, 25, 55, 0.16);
+      padding: clamp(30px, 5vw, 56px);
+    }
+
+    header.hd { border-bottom: 3px solid; border-image: var(--grad) 1; padding-bottom: 22px; margin-bottom: 26px; }
+    h1 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(30px, 5vw, 40px);
+      letter-spacing: -0.02em;
+      margin: 0 0 4px;
+    }
+    .hd-title { font-size: 16.5px; font-weight: 600; color: var(--accent); margin: 0 0 12px; }
+    .hd-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 12.8px;
+      color: var(--soft);
+    }
+    .hd-contacts a { color: var(--soft); text-decoration: none; }
+    .hd-contacts a:hover { color: var(--accent); }
+
+    h2 {
+      font-family: "Sora", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+    .summary { color: var(--soft); font-size: 14.6px; }
+
+    /* Experience */
+    .job { margin-bottom: 20px; break-inside: avoid; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+    .job-head h3 { font-family: "Sora", sans-serif; font-size: 16px; margin: 0; }
+    .job-org { font-weight: 600; color: var(--accent2); font-size: 13.5px; }
+    .job-date { font-size: 12px; color: var(--faint); white-space: nowrap; }
+    .job p { margin: 6px 0 8px; color: var(--soft); }
+    .job ul { margin: 6px 0 0; padding-left: 18px; color: var(--soft); }
+    .job li { margin-bottom: 4px; }
+    .promo-tag {
+      display: inline-block;
+      font: 600 10.5px "JetBrains Mono", monospace;
+      color: #047857;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 2px 9px;
+      border-radius: 99px;
+      margin-left: 8px;
+      vertical-align: 2px;
+    }
+    .subrole { margin: 12px 0 0 16px; padding-left: 16px; border-left: 2px solid var(--line); }
+
+    /* Chips */
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chips span {
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--chipbg);
+      border: 1px solid var(--line);
+      color: var(--soft);
+      padding: 4px 11px;
+      border-radius: 7px;
+    }
+    .skill-row { display: grid; grid-template-columns: 150px 1fr; gap: 12px; margin-bottom: 9px; align-items: baseline; }
+    .skill-row b { font-size: 12.5px; color: var(--ink); }
+    .skill-row div { color: var(--soft); font-size: 13.3px; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 26px; }
+    .fact { display: flex; justify-content: space-between; gap: 14px; border-bottom: 1px dashed var(--line); padding: 5px 2px; font-size: 13.2px; }
+    .fact b { color: var(--ink); }
+    .fact span { color: var(--soft); text-align: right; }
+
+    .foot { margin-top: 28px; text-align: center; font-size: 11.5px; color: var(--faint); }
+
+    @media (max-width: 640px) {
+      .skill-row { grid-template-columns: 1fr; gap: 2px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    /* Print */
+    @page { size: A4; margin: 11mm 12mm; }
+    @media print {
+      body { background: #fff; font-size: 12.4px; }
+      .toolbar { display: none; }
+      .page { margin: 0; max-width: none; box-shadow: none; border-radius: 0; padding: 0; }
+      a { color: inherit; text-decoration: none; }
+      h2 { margin-top: 18px; }
+      .job { margin-bottom: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="index.html">← Back to portfolio</a>
+    <span class="toolbar-note">Tip: “Download PDF” uses your browser’s print dialog — choose “Save as PDF”.</span>
+    <button class="dl" onclick="window.print()">Download PDF ⤓</button>
+  </div>
+
+  <main class="page">
+
+    <header class="hd">
+      <h1>Jihad Abu Zuhri</h1>
+      <p class="hd-title">Principal Software Engineer — Backend Systems · Platform Architecture · Agentic AI</p>
+      <div class="hd-contacts mono">
+        <span>Nablus, Palestine</span>
+        <a href="mailto:jihadabuzuhri@gmail.com">jihadabuzuhri@gmail.com</a>
+        <a href="tel:+972592754236">+972 59 275 4236</a>
+        <a href="https://www.linkedin.com/in/jihadabuzuhri/">linkedin.com/in/jihadabuzuhri</a>
+        <a href="https://github.com/jihadabuzuhri">github.com/jihadabuzuhri</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">
+        Principal Software Engineer at Foothill Technology Solutions, working across Restaurant365's multi-team
+        engineering organization. Specialized in backend systems, platform architecture, and large-scale distributed
+        systems — driving scalable, resilient, high-performance solutions across complex product domains. Progressed
+        from backend intern to principal in under four years through deep ownership of APIs, data systems, clean
+        architecture, and cross-team architectural strategy. Co-founder &amp; technical lead of HEARIZE, an
+        award-winning startup translating sign language to speech in real time with deep learning. Currently focused
+        on agentic AI systems and how autonomous software can amplify platform capability.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Foothill Technology Solutions × Restaurant365</h3>
+          <span class="job-date mono">Oct 2022 — Present · Nablus</span>
+        </div>
+
+        <div class="subrole">
+          <div class="job-head">
+            <h3>Principal Software Engineer<span class="promo-tag">CURRENT</span></h3>
+            <span class="job-date mono">May 2026 — Present</span>
+          </div>
+          <ul>
+            <li>Senior technical leader across multiple teams in a broad product area — shaping architecture, influencing technical strategy, and driving scalable, resilient, maintainable solutions.</li>
+            <li>Lead cross-team alignment on complex initiatives, resolve high-impact technical dependencies, and guide key architectural and implementation decisions across platform and product efforts.</li>
+            <li>Help define engineering direction and raise the bar for architectural quality and execution.</li>
+          </ul>
+        </div>
+
+        <div class="subrole">
+          <div class="job-head">
+            <h3>Senior Software Engineer — Payroll Platform (Systems &amp; Architecture)<span class="promo-tag">PROMOTED</span></h3>
+            <span class="job-date mono">Jul 2025 — May 2026</span>
+          </div>
+          <ul>
+            <li>Shaped critical architecture in Restaurant365's Payroll domain: complex payroll workflows, systems alignment, migration strategy, and platform improvements across 6 cross-functional teams.</li>
+            <li>Served as Payroll Backend Liaison on the Architecture Council, representing the domain in company-wide technical decisions and architectural direction.</li>
+            <li>Partnered with cross-functional teams to translate business and technical complexity into practical implementation paths.</li>
+          </ul>
+        </div>
+
+        <div class="subrole">
+          <div class="job-head">
+            <h3>Backend Software Engineer → Mid-Level<span class="promo-tag">PROMOTED</span></h3>
+            <span class="job-date mono">Dec 2022 — Jul 2025</span>
+          </div>
+          <ul>
+            <li>Built business-critical workflows end to end: REST APIs, data validation, import &amp; processing flows, backend service logic, and production issue resolution.</li>
+            <li>Delivered high-throughput, maintainable systems with .NET Core + SQL Server and Spring Boot + PostgreSQL; JWT-based auth, EF Core/JPA data layers, clean architecture within agile cycles.</li>
+            <li>Promoted to mid-level for expanded technical ownership and system-level thinking.</li>
+          </ul>
+        </div>
+
+        <div class="subrole">
+          <div class="job-head">
+            <h3>Backend Software Engineer — Intern</h3>
+            <span class="job-date mono">Oct 2022 — Dec 2022</span>
+          </div>
+          <ul>
+            <li>Completed a structured backend program: C# (OOP, LINQ, async/await), xUnit testing, SQL &amp; EF Core, ASP.NET Core APIs, and system-design fundamentals (auth, caching, scaling, queues, containers, DDD, microservices).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Co-Founder &amp; Technical Lead — HEARIZE</h3>
+          <span class="job-date mono">Jan 2021 — Present</span>
+        </div>
+        <ul>
+          <li>Co-founded a startup enabling real-time, bidirectional translation between sign language and speech using deep learning (CNNs + computer vision), deployed on-device and in the cloud.</li>
+          <li>Built the backend, designed the APIs, and led AI model integration as technical lead.</li>
+          <li>Recognized in international entrepreneurship competitions: IEEE Pioneer, Doc-Tech, GIC, and IEEE Region 8 Entrepreneurship.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Instructor — CSE Academy, Arab American University</h3>
+          <span class="job-date mono">Jan 2022 — Oct 2023</span>
+        </div>
+        <ul>
+          <li>Taught programming, algorithms, and backend fundamentals; mentored students in coding best practices and competitive-programming preparation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skill-row"><b>Languages</b><div>C#, Java, Python, JavaScript, SQL, C++, Bash</div></div>
+      <div class="skill-row"><b>Backend &amp; APIs</b><div>.NET Core / ASP.NET Core, Spring Boot, REST design, JWT/OAuth2, EF Core, JPA, background services</div></div>
+      <div class="skill-row"><b>Architecture</b><div>Clean architecture, DDD, microservices, modular monoliths, distributed systems, system design, SOLID</div></div>
+      <div class="skill-row"><b>Data</b><div>SQL Server, PostgreSQL, Oracle, Redis — schema design, indexing, query tuning, migrations</div></div>
+      <div class="skill-row"><b>Cloud &amp; DevOps</b><div>AWS, Docker, CI/CD (GitHub &amp; GitLab), RabbitMQ, Nginx, IIS, Linux</div></div>
+      <div class="skill-row"><b>AI / ML</b><div>Agentic AI systems, TensorFlow, PyTorch, OpenCV, CNNs, on-device &amp; real-time inference</div></div>
+      <div class="skill-row"><b>Practices</b><div>Agile, unit &amp; integration testing (xUnit), code review, mentoring, technical leadership</div></div>
+    </section>
+
+    <section>
+      <h2>Education &amp; Honors</h2>
+      <div class="two-col">
+        <div class="fact"><b>B.Sc. Computer Systems Engineering</b><span>Arab American University · 2018 — 2023</span></div>
+        <div class="fact"><b>GPA</b><span>3.9 / 4.0 — honors, top of class</span></div>
+        <div class="fact"><b>Competitive programming</b><span>IEEEXtreme (team lead) · ACM-ICPC</span></div>
+        <div class="fact"><b>Entrepreneurship awards</b><span>IEEE Pioneer · Doc-Tech · GIC · IEEE Region 8</span></div>
+        <div class="fact"><b>Community</b><span>Founded developer communities @ AAUP</span></div>
+        <div class="fact"><b>Languages</b><span>Arabic (native) · English (fluent)</span></div>
+      </div>
+    </section>
+
+    <p class="foot mono">Generated July 2026 · latest version at the portfolio → jihadabuzuhri.github.io</p>
+  </main>
+
+</body>
+</html>

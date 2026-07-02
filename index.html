@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jihad Abu Zuhri — Principal Software Engineer · Backend & Platform Architecture</title>
+  <meta name="description" content="Principal Software Engineer specializing in backend systems, platform architecture, distributed systems and agentic AI. Intern → Principal in under 4 years. Co-founder of HEARIZE." />
+  <meta name="author" content="Jihad Abu Zuhri" />
+  <meta name="theme-color" content="#04070f" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jihad Abu Zuhri — Principal Software Engineer" />
+  <meta property="og:description" content="Backend systems · Platform architecture · Distributed systems · Agentic AI. Intern → Principal in under 4 years." />
+  <meta property="og:image" content="assets/jihad.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jihad Abu Zuhri",
+    "jobTitle": "Principal Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Foothill Technology Solutions (Restaurant365)" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Nablus", "addressCountry": "Palestine" },
+    "email": "mailto:jihadabuzuhri@gmail.com",
+    "alumniOf": "Arab American University",
+    "sameAs": [
+      "https://www.linkedin.com/in/jihadabuzuhri/",
+      "https://github.com/jihadabuzuhri"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ▒▒ Boot preloader ▒▒ -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <pre class="boot-log" id="bootLog"></pre>
+      <div class="boot-bar"><span id="bootBar"></span></div>
+    </div>
+  </div>
+
+  <!-- ▒▒ Ambient background ▒▒ -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-aurora a1"></div>
+    <div class="bg-aurora a2"></div>
+    <div class="bg-aurora a3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- ▒▒ Nav ▒▒ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner container">
+      <a class="logo mono" href="#top" aria-label="Home">
+        <span class="logo-glyph">&gt;_</span>
+        <span class="logo-text">jihad<span class="logo-cursor">▊</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about" data-nav="about">About</a>
+        <a href="#experience" data-nav="experience">Experience</a>
+        <a href="#projects" data-nav="projects">Projects</a>
+        <a href="#skills" data-nav="skills">Skills</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="kbd-btn mono" id="paletteBtn" title="Command palette" aria-label="Open command palette">
+          <kbd>⌘</kbd><kbd>K</kbd>
+        </button>
+        <a class="btn btn-small" href="resume.html" data-magnetic>Résumé</a>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile sheet -->
+  <div class="sheet" id="sheet" aria-hidden="true">
+    <nav class="sheet-links" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.html">Résumé →</a>
+    </nav>
+    <p class="sheet-hint mono">psst — try the terminal <button class="link-btn mono" data-open-terminal>&gt;_</button></p>
+  </div>
+
+  <main id="top">
+
+    <!-- ▒▒ HERO ▒▒ -->
+    <section class="hero">
+      <canvas id="net" class="hero-net" aria-hidden="true"></canvas>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-eyebrow mono reveal">
+            <span class="status-dot"></span>
+            <span class="hero-eyebrow-text"><span id="greeting">Hey</span> — from Nablus, Palestine 🇵🇸</span>
+          </p>
+
+          <h1 class="hero-name reveal">
+            <span class="hero-hello">I'm</span>
+            <span class="grad">Jihad Abu&nbsp;Zuhri</span>
+          </h1>
+
+          <p class="hero-typed mono reveal">
+            <span class="typed-prompt">$</span>
+            <span id="typed"></span><span class="typed-caret">▊</span>
+          </p>
+
+          <p class="hero-pitch reveal">
+            I architect <strong>backend platforms that scale</strong> — payroll systems moving real money,
+            distributed services spanning entire teams, and AI that gives sign language a voice.
+            Intern → <strong>Principal</strong> in under four years.
+          </p>
+
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#projects" data-magnetic>Explore my work <span class="btn-arrow">↓</span></a>
+            <a class="btn btn-ghost" href="#contact" data-magnetic>Get in touch</a>
+            <button class="btn btn-ghost mono" data-open-terminal data-magnetic title="Open terminal">&gt;_</button>
+          </div>
+
+          <div class="hero-social reveal">
+            <a href="https://github.com/jihadabuzuhri" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/jihadabuzuhri/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+            </a>
+            <a href="mailto:jihadabuzuhri@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+            <span class="hero-social-note mono">// let's connect</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="portrait" data-tilt>
+            <div class="portrait-ring" aria-hidden="true"></div>
+            <img src="assets/jihad.jpg" alt="Portrait of Jihad Abu Zuhri" width="420" height="420" />
+            <div class="chip chip-1 mono">Principal SWE</div>
+            <div class="chip chip-2 mono">Architecture Council</div>
+            <div class="chip chip-3 mono">Agentic AI</div>
+            <div class="chip chip-4 mono">4× Int'l Awards</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats container reveal">
+        <div class="stat">
+          <span class="stat-num mono">&lt;<span data-count="4" data-decimals="0">0</span> yrs</span>
+          <span class="stat-label">Intern → Principal</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono"><span data-count="6" data-decimals="0">0</span>+</span>
+          <span class="stat-label">Cross-functional teams</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono"><span data-count="3.9" data-decimals="1">0</span>/4.0</span>
+          <span class="stat-label">GPA — top of class</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num mono"><span data-count="4" data-decimals="0">0</span>+</span>
+          <span class="stat-label">Int'l startup awards</span>
+        </div>
+      </div>
+
+      <a class="scroll-hint mono" href="#about" aria-label="Scroll down">
+        <span>scroll</span>
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ▒▒ Marquee ▒▒ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track mono">
+        <span>C#</span><i>◆</i><span>.NET Core</span><i>◆</i><span>Spring Boot</span><i>◆</i>
+        <span>SQL Server</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Clean Architecture</span><i>◆</i>
+        <span>DDD</span><i>◆</i><span>Microservices</span><i>◆</i><span>Docker</span><i>◆</i>
+        <span>AWS</span><i>◆</i><span>Redis</span><i>◆</i><span>RabbitMQ</span><i>◆</i>
+        <span>TensorFlow</span><i>◆</i><span>OpenCV</span><i>◆</i><span>Agentic AI</span><i>◆</i>
+        <span>C#</span><i>◆</i><span>.NET Core</span><i>◆</i><span>Spring Boot</span><i>◆</i>
+        <span>SQL Server</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Clean Architecture</span><i>◆</i>
+        <span>DDD</span><i>◆</i><span>Microservices</span><i>◆</i><span>Docker</span><i>◆</i>
+        <span>AWS</span><i>◆</i><span>Redis</span><i>◆</i><span>RabbitMQ</span><i>◆</i>
+        <span>TensorFlow</span><i>◆</i><span>OpenCV</span><i>◆</i><span>Agentic AI</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ▒▒ ABOUT ▒▒ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="endpoint reveal">
+          <span class="endpoint-method get mono">GET</span>
+          <h2 class="endpoint-path mono">/about</h2>
+          <span class="endpoint-status mono">200 OK</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="lead">
+              I'm a <strong>Principal Software Engineer</strong> at Foothill Technology Solutions, embedded across
+              <strong>Restaurant365</strong>'s multi-team engineering organization. My lane: backend systems,
+              platform architecture, and large-scale distributed systems — solutions that stay scalable,
+              resilient and fast as complexity grows.
+            </p>
+            <p>
+              I went from backend intern to principal in under four years — not by accident, but by owning harder
+              problems at every step: business-critical payroll workflows, cross-domain migration strategy, and
+              architecture decisions that outlive any single sprint. As <strong>Payroll Backend Liaison on the
+              Architecture Council</strong>, I represented an entire domain in company-wide technical direction.
+            </p>
+            <p>
+              Outside the day job, I co-founded <strong>HEARIZE</strong> — a mobile app that translates sign language
+              to speech and back, in real time, using deep learning. It earned recognition at IEEE Pioneer, Doc-Tech,
+              GIC and IEEE Region 8. And because knowledge compounds, I spent two years teaching programming and
+              mentoring engineering students at CSE Academy.
+            </p>
+            <p>
+              These days I'm deep into <strong>Agentic AI</strong> — exploring how autonomous systems can level up
+              software development and platform capability.
+            </p>
+          </div>
+
+          <aside class="about-card reveal" data-tilt>
+            <div class="about-card-head mono">
+              <span class="tl-dot r"></span><span class="tl-dot y"></span><span class="tl-dot g"></span>
+              <span class="about-card-title">profile.yaml</span>
+            </div>
+            <pre class="mono about-yaml"><code><span class="y-key">name</span>: Jihad Abu Zuhri
+<span class="y-key">role</span>: Principal Software Engineer
+<span class="y-key">org</span>: FTS × Restaurant365
+<span class="y-key">base</span>: Nablus, Palestine
+<span class="y-key">domains</span>:
+  - backend-systems
+  - platform-architecture
+  - distributed-systems
+<span class="y-key">current_focus</span>: <span class="y-hot">agentic-ai</span>
+<span class="y-key">languages</span>:
+  <span class="y-key">arabic</span>: native
+  <span class="y-key">english</span>: fluent
+<span class="y-key">status</span>: <span class="y-ok">● shipping</span></code></pre>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▒▒ EXPERIENCE ▒▒ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="endpoint reveal">
+          <span class="endpoint-method get mono">GET</span>
+          <h2 class="endpoint-path mono">/experience</h2>
+          <span class="endpoint-status mono">200 OK</span>
+        </div>
+        <p class="section-sub reveal">Four promotions. One trajectory. <span class="mono grad">while(true) &#123; level_up(); &#125;</span></p>
+
+        <div class="timeline">
+
+          <article class="tl-item reveal">
+            <div class="tl-node current" aria-hidden="true"></div>
+            <div class="tl-card" data-tilt>
+              <header class="tl-head">
+                <div>
+                  <h3>Principal Software Engineer</h3>
+                  <p class="tl-org">Foothill Technology Solutions × <strong>Restaurant365</strong></p>
+                </div>
+                <div class="tl-meta mono">
+                  <span class="tl-date">May 2026 — present</span>
+                  <span class="tag tag-hot">current</span>
+                </div>
+              </header>
+              <p>
+                Senior technical leader across multiple teams in a broad product area — shaping architecture,
+                influencing technical strategy, and driving scalable, resilient solutions. Leading cross-team
+                alignment on complex initiatives, resolving high-impact dependencies, and raising the bar for
+                architectural quality and execution.
+              </p>
+              <ul class="tag-row mono">
+                <li>Architecture</li><li>Tech Strategy</li><li>Cross-team Leadership</li><li>Platform</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-node" aria-hidden="true"></div>
+            <div class="tl-card" data-tilt>
+              <div class="promo mono">▲ promoted</div>
+              <header class="tl-head">
+                <div>
+                  <h3>Senior Software Engineer — Payroll Platform</h3>
+                  <p class="tl-org">Systems &amp; Architecture · Restaurant365</p>
+                </div>
+                <div class="tl-meta mono"><span class="tl-date">Jul 2025 — May 2026</span></div>
+              </header>
+              <p>
+                Shaped critical architecture in the Payroll domain — complex payroll workflows, systems alignment,
+                migration strategy and platform improvements across <strong>6 cross-functional teams</strong>.
+                Served as <strong>Payroll Backend Liaison on the Architecture Council</strong>, representing the domain
+                in company-wide technical decisions.
+              </p>
+              <ul class="tag-row mono">
+                <li>.NET Core</li><li>SQL Server</li><li>Migration Strategy</li><li>Architecture Council</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-node" aria-hidden="true"></div>
+            <div class="tl-card" data-tilt>
+              <div class="promo mono">▲ promoted — Junior → Mid-level</div>
+              <header class="tl-head">
+                <div>
+                  <h3>Backend Software Engineer</h3>
+                  <p class="tl-org">Restaurant365</p>
+                </div>
+                <div class="tl-meta mono"><span class="tl-date">Dec 2022 — Jul 2025</span></div>
+              </header>
+              <p>
+                Built business-critical workflows end to end: APIs, data validation, import &amp; processing flows,
+                backend service logic and production issue resolution. Stack: <strong>.NET Core + SQL Server</strong>
+                and <strong>Spring Boot + PostgreSQL</strong>, JWT auth, EF Core/JPA, clean architecture in agile cycles.
+              </p>
+              <ul class="tag-row mono">
+                <li>REST APIs</li><li>EF Core</li><li>Spring Boot</li><li>JWT/OAuth2</li><li>Production Ownership</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-node" aria-hidden="true"></div>
+            <div class="tl-card" data-tilt>
+              <header class="tl-head">
+                <div>
+                  <h3>Backend Engineer — Intern</h3>
+                  <p class="tl-org">Foothill Technology Solutions</p>
+                </div>
+                <div class="tl-meta mono"><span class="tl-date">Oct — Dec 2022</span></div>
+              </header>
+              <p>
+                Structured backend program: C# deep-dive, xUnit testing, SQL &amp; EF Core, ASP.NET Core APIs, and
+                system-design fundamentals — HTTP, auth, caching, scaling, queues, containers, DDD and microservices.
+              </p>
+              <ul class="tag-row mono">
+                <li>C#</li><li>ASP.NET Core</li><li>xUnit</li><li>System Design</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-node alt" aria-hidden="true"></div>
+            <div class="tl-card" data-tilt>
+              <header class="tl-head">
+                <div>
+                  <h3>Co-Founder &amp; Technical Lead</h3>
+                  <p class="tl-org">HEARIZE</p>
+                </div>
+                <div class="tl-meta mono">
+                  <span class="tl-date">Jan 2021 — present</span>
+                  <span class="tag tag-alt">startup</span>
+                </div>
+              </header>
+              <p>
+                Co-founded a startup translating sign language ↔ speech in real time with deep learning. Built the
+                backend, APIs and AI integration (CNNs + computer vision), deployed on-device and in the cloud.
+                Recognized at IEEE Pioneer, Doc-Tech, GIC and IEEE Region 8 Entrepreneurship.
+              </p>
+              <ul class="tag-row mono">
+                <li>TensorFlow</li><li>OpenCV</li><li>CNNs</li><li>On-device AI</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-node alt" aria-hidden="true"></div>
+            <div class="tl-card" data-tilt>
+              <header class="tl-head">
+                <div>
+                  <h3>Instructor</h3>
+                  <p class="tl-org">CSE Academy · Arab American University</p>
+                </div>
+                <div class="tl-meta mono"><span class="tl-date">Jan 2022 — Oct 2023</span></div>
+              </header>
+              <p>
+                Taught programming, algorithms and backend fundamentals; mentored students in clean code and guided
+                learners toward competitive programming.
+              </p>
+              <ul class="tag-row mono">
+                <li>Teaching</li><li>Algorithms</li><li>Mentorship</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ▒▒ PROJECTS ▒▒ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="endpoint reveal">
+          <span class="endpoint-method get mono">GET</span>
+          <h2 class="endpoint-path mono">/projects</h2>
+          <span class="endpoint-status mono">200 OK</span>
+        </div>
+        <p class="section-sub reveal">Things I've built, led, or broken enough times to understand deeply.</p>
+
+        <div class="projects-grid">
+
+          <article class="project featured reveal" data-tilt>
+            <div class="project-glow" aria-hidden="true"></div>
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🤟</span>
+              <span class="tag tag-hot mono">featured · co-founder</span>
+            </div>
+            <h3>HEARIZE</h3>
+            <p class="project-tagline grad">Giving sign language a voice.</p>
+            <p>
+              A mobile app enabling <strong>real-time, bidirectional translation between sign language and speech</strong>
+              using deep learning. I lead the tech: backend, APIs, and CNN + computer-vision models running
+              both on-device and in the cloud.
+            </p>
+            <div class="award-row">
+              <span class="award mono">🏆 IEEE Pioneer</span>
+              <span class="award mono">🏆 Doc-Tech</span>
+              <span class="award mono">🏆 GIC</span>
+              <span class="award mono">🏆 IEEE Region 8</span>
+            </div>
+            <ul class="tag-row mono">
+              <li>TensorFlow</li><li>PyTorch</li><li>OpenCV</li><li>CNNs</li><li>REST APIs</li><li>Cloud + Edge</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tilt>
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🧮</span>
+              <span class="tag mono">enterprise</span>
+            </div>
+            <h3>Payroll Platform Architecture</h3>
+            <p class="project-tagline">Where correctness is non-negotiable.</p>
+            <p>
+              Architecture and evolution of Restaurant365's payroll backend — complex workflows, migration
+              strategy and platform improvements spanning 6 cross-functional teams, with a seat on the
+              Architecture Council.
+            </p>
+            <ul class="tag-row mono">
+              <li>.NET Core</li><li>SQL Server</li><li>Spring Boot</li><li>PostgreSQL</li><li>Microservices</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tilt>
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🎓</span>
+              <span class="tag mono">community</span>
+            </div>
+            <h3>Engineers Building Engineers</h3>
+            <p class="project-tagline">Teaching, mentoring, competing.</p>
+            <p>
+              Two years instructing at CSE Academy, leading university teams into <strong>IEEEXtreme</strong> and
+              <strong>ACM-ICPC</strong>, and founding developer communities at Arab American University.
+            </p>
+            <ul class="tag-row mono">
+              <li>Mentorship</li><li>Algorithms</li><li>Competitive Programming</li>
+            </ul>
+          </article>
+
+          <article class="project reveal" data-tilt>
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">🛰️</span>
+              <span class="tag mono">meta</span>
+            </div>
+            <h3>This Portfolio</h3>
+            <p class="project-tagline">You're looking at it.</p>
+            <p>
+              Hand-built with zero frameworks and zero templates: custom animation engine, canvas particle network,
+              command palette, and a working terminal. Press <kbd class="mono">⌘K</kbd> — or
+              <button class="link-btn mono" data-open-terminal>open the terminal</button>.
+            </p>
+            <ul class="tag-row mono">
+              <li>Vanilla JS</li><li>Canvas</li><li>CSS</li><li>0 dependencies</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ▒▒ SKILLS ▒▒ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="endpoint reveal">
+          <span class="endpoint-method get mono">GET</span>
+          <h2 class="endpoint-path mono">/skills</h2>
+          <span class="endpoint-status mono">200 OK</span>
+        </div>
+        <p class="section-sub reveal">The toolbox — sharpened daily since 2018.</p>
+
+        <div class="core-stack reveal">
+          <span class="core-label mono">core stack →</span>
+          <div class="core-chips">
+            <span class="chip-core mono">C#</span>
+            <span class="chip-core mono">.NET Core</span>
+            <span class="chip-core mono">SQL Server</span>
+            <span class="chip-core mono">Spring Boot</span>
+            <span class="chip-core mono">PostgreSQL</span>
+            <span class="chip-core mono">Docker</span>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">⌨️</span> Languages</h3>
+            <div class="skill-chips">
+              <span>C#</span><span>Java</span><span>Python</span><span>JavaScript</span><span>SQL</span><span>C++</span><span>Bash</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">🔌</span> Backend &amp; APIs</h3>
+            <div class="skill-chips">
+              <span>ASP.NET Core</span><span>Spring Boot</span><span>REST Design</span><span>JWT / OAuth2</span><span>EF Core</span><span>JPA</span><span>Background Services</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">🏛️</span> Architecture</h3>
+            <div class="skill-chips">
+              <span>Clean Architecture</span><span>DDD</span><span>Microservices</span><span>Modular Monoliths</span><span>System Design</span><span>SOLID</span><span>Distributed Systems</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">🗄️</span> Data</h3>
+            <div class="skill-chips">
+              <span>SQL Server</span><span>PostgreSQL</span><span>Oracle</span><span>Redis</span><span>Schema Design</span><span>Indexing &amp; Tuning</span><span>Migrations</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">☁️</span> Cloud &amp; DevOps</h3>
+            <div class="skill-chips">
+              <span>AWS</span><span>Docker</span><span>CI/CD — GitHub &amp; GitLab</span><span>RabbitMQ</span><span>Nginx</span><span>IIS</span><span>Linux</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-tilt>
+            <h3 class="mono"><span aria-hidden="true">🧠</span> AI &amp; ML</h3>
+            <div class="skill-chips">
+              <span>Agentic AI Systems</span><span>TensorFlow</span><span>PyTorch</span><span>OpenCV</span><span>CNNs</span><span>On-device Inference</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▒▒ EDUCATION ▒▒ -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="endpoint reveal">
+          <span class="endpoint-method get mono">GET</span>
+          <h2 class="endpoint-path mono">/education</h2>
+          <span class="endpoint-status mono">200 OK</span>
+        </div>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal" data-tilt>
+            <span class="edu-icon" aria-hidden="true">🎓</span>
+            <h3>B.Sc. Computer Systems Engineering</h3>
+            <p class="tl-org">Arab American University · 2018 — 2023</p>
+            <p><strong>Top of class</strong>, graduated with honors — <span class="grad mono">3.9 / 4.0 GPA</span></p>
+          </div>
+          <div class="edu-card reveal" data-tilt>
+            <span class="edu-icon" aria-hidden="true">🏅</span>
+            <h3>Honors &amp; Competition</h3>
+            <div class="skill-chips">
+              <span>IEEEXtreme — team lead</span><span>ACM-ICPC</span><span>IEEE Pioneer</span><span>Doc-Tech</span><span>GIC</span><span>IEEE R8 Entrepreneurship</span><span>Founded dev communities @ AAUP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▒▒ CONTACT ▒▒ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="endpoint reveal">
+          <span class="endpoint-method post mono">POST</span>
+          <h2 class="endpoint-path mono">/contact</h2>
+          <span class="endpoint-status mono">201 Created</span>
+        </div>
+
+        <div class="contact-card reveal" data-tilt>
+          <h3 class="contact-title">Let's build something <span class="grad">that scales.</span></h3>
+          <p class="contact-sub">
+            A hard backend problem, a platform that's creaking, or an idea worth engineering —
+            my inbox compiles.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary btn-big" href="mailto:jihadabuzuhri@gmail.com" data-magnetic>
+              jihadabuzuhri@gmail.com
+            </a>
+            <button class="btn btn-ghost" id="copyEmail" data-magnetic>copy ⧉</button>
+          </div>
+          <div class="contact-links mono">
+            <a href="https://www.linkedin.com/in/jihadabuzuhri/" target="_blank" rel="noopener">linkedin/jihadabuzuhri ↗</a>
+            <span>·</span>
+            <a href="https://github.com/jihadabuzuhri" target="_blank" rel="noopener">github/jihadabuzuhri ↗</a>
+            <span>·</span>
+            <span>Nablus, Palestine · UTC+2</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ▒▒ Footer ▒▒ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="mono footer-echo">$ echo "Thanks for scrolling — now let's build something."</p>
+      <p class="footer-note">
+        © <span id="year">2026</span> Jihad Abu Zuhri · Designed &amp; engineered by hand — no frameworks, no templates.
+      </p>
+      <p class="footer-hint mono">⌘K for commands · ` for terminal · ↑↑↓↓←→←→BA for chaos</p>
+    </div>
+  </footer>
+
+  <!-- ▒▒ Command palette ▒▒ -->
+  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command palette" hidden>
+    <div class="palette-backdrop" data-palette-close></div>
+    <div class="palette-panel">
+      <input type="text" id="paletteInput" class="mono" placeholder="Type a command or search…" autocomplete="off" spellcheck="false" />
+      <ul id="paletteList" class="palette-list"></ul>
+      <div class="palette-foot mono"><kbd>↑↓</kbd> navigate <kbd>↵</kbd> run <kbd>esc</kbd> close</div>
+    </div>
+  </div>
+
+  <!-- ▒▒ Terminal ▒▒ -->
+  <div class="term" id="terminal" role="dialog" aria-modal="true" aria-label="Interactive terminal" hidden>
+    <div class="term-backdrop" data-term-close></div>
+    <div class="term-window">
+      <div class="term-bar mono">
+        <span class="tl-dot r" data-term-close role="button" aria-label="Close terminal"></span>
+        <span class="tl-dot y"></span><span class="tl-dot g"></span>
+        <span class="term-title">guest@jihad.dev — zsh</span>
+      </div>
+      <div class="term-body mono" id="termBody"></div>
+      <div class="term-input-row mono">
+        <span class="term-prompt">guest@jihad.dev:~$</span>
+        <input id="termInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal input" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Matrix overlay -->
+  <canvas id="matrix" class="matrix" hidden></canvas>
+
+  <!-- Toast -->
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Local tooling
+.claude/
+
+# Source documents (not part of the site)
+*.pdf
+/jihad.jpg

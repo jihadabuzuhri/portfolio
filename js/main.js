@@ -523,7 +523,7 @@
       ),
     projects: () =>
       tPrint(
-        '<span class="t-cmd">HEARIZE</span>     sign language ↔ speech, real-time, deep learning 🤟\n<span class="t-cmd">payroll</span>     platform architecture @ R365 — 6 teams, 1 council seat\n<span class="t-cmd">community</span>   CSE Academy · IEEEXtreme · ACM-ICPC · AAUP dev communities\n<span class="t-cmd">this-site</span>   vanilla JS, 0 dependencies, 100% handmade'
+        '<span class="t-cmd">HEARIZE</span>     sign language ↔ speech, real-time, deep learning 🤟\n<span class="t-cmd">payroll</span>     high-throughput payroll platform & sync architecture @ R365\n<span class="t-cmd">platform</span>    gateway, integration, observability & agentic dev tooling\n<span class="t-cmd">council</span>     founded & run a weekly architecture council · 6 teams\n<span class="t-cmd">daily</span>       offline-first PWA dashboard — <a href="https://jihadabuzuhri.github.io/daily-dashboard/" target="_blank" rel="noopener">live</a> · <a href="https://github.com/jihadabuzuhri/daily-dashboard" target="_blank" rel="noopener">code</a>\n<span class="t-cmd">community</span>   CSE Academy · IEEEXtreme · ACM-ICPC · AAUP dev communities\n<span class="t-cmd">this-site</span>   vanilla JS, 0 dependencies, 100% handmade'
       ),
     awards: () =>
       tPrint(

@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Project context for Claude Code sessions on this repo.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## What this is
 
@@ -27,6 +27,7 @@ Live at: https://jihadabuzuhri.github.io/portfolio/
 - **ES modules, not bundled.** `<script type="module">` auto-defers. Each module exports pure init functions; main.js wires them.
 - **Content stays in HTML.** No JSON data files, no template engine. Edit the HTML directly.
 - **resume.html must stay in sync** with index.html content (experience, skills, education).
+- **resume.html is self-contained** — inline `<style>`, no external CSS/JS imports. Don't link it to `css/` or `js/`; the print flow depends on it standing alone.
 - **Respect `prefers-reduced-motion`.** All animations must short-circuit for users with reduced motion.
 - **Semantic HTML + accessibility.** Skip link, ARIA labels, focus rings, keyboard navigation, correct heading order.
 
@@ -45,7 +46,7 @@ python3 -m http.server 4173
 # open http://localhost:4173
 ```
 
-Or use the Claude Code preview server (`.claude/launch.json` is already configured).
+Or use the Claude Code preview server: `preview_start` with name `portfolio` (defined in `.claude/launch.json`, binds 127.0.0.1:4173).
 
 ## Deploying
 
@@ -59,3 +60,4 @@ When changing career content (new role, new project, updated skills):
 3. `js/modules/terminal.js` — `neofetch` output and `cat profile.json`
 4. `js/modules/palette.js` — command palette entries (if adding new sections)
 5. `sitemap.xml` — if adding new pages
+6. `CHANGELOG.md` — for anything notable enough to be user-visible

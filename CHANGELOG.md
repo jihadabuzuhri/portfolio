@@ -23,6 +23,9 @@ no public API to break.
   with title, excerpt, publish date, read time, tag row and a "Read on dev.to"
   CTA. Nav link, mobile sheet entry, command palette shortcut, and terminal
   `writing` command all wired to match.
+- **"Beyond the code" soft-skills card** at the top of `/skills` — leadership,
+  cross-team collaboration, mentorship, communication, technical writing (with
+  a nod to the dev.to articles), ownership, decision-making, growth mindset.
 - Custom `404.html` with glitch animation and terminal trace.
 - `robots.txt` and `sitemap.xml` for search-engine friendliness.
 - `.editorconfig` to keep formatting consistent across editors.

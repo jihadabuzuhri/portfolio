@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════════════════════════════
+   Tokens — design system variables (single source of truth)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Surfaces */
+  --bg0: #04070f;
+  --bg1: #0a0f1e;
+  --panel: rgba(255, 255, 255, 0.035);
+  --panel-2: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-soft: rgba(255, 255, 255, 0.05);
+
+  /* Text */
+  --txt: #e8ecf8;
+  --muted: #93a0ba;
+  --dim: #5c6a86;
+
+  /* Accents */
+  --c1: #38bdf8;   /* sky   */
+  --c2: #818cf8;   /* indigo*/
+  --c3: #f472b6;   /* pink  */
+  --ok: #34d399;   /* green */
+  --hot: #fbbf24;  /* amber */
+
+  --grad: linear-gradient(100deg, var(--c1), var(--c2) 50%, var(--c3));
+  --grad-soft: linear-gradient(100deg, rgba(56,189,248,.16), rgba(129,140,248,.16), rgba(244,114,182,.16));
+
+  /* Typography */
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  /* Radii */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+
+  /* Layout */
+  --nav-h: 72px;
+
+  /* Motion + effects */
+  --ease-out: cubic-bezier(0.22, 0.8, 0.26, 0.99);
+  --shadow-glow: 0 0 40px rgba(56, 189, 248, 0.12), 0 0 90px rgba(129, 140, 248, 0.08);
+}

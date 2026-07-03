@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — this path does not exist · jihad.dev</title>
+  <meta name="description" content="404 Not Found — the route you requested wasn't in the router table." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#04070f" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg0: #04070f;
+      --txt: #e8ecf8;
+      --muted: #93a0ba;
+      --dim: #5c6a86;
+      --c1: #38bdf8;
+      --c2: #818cf8;
+      --c3: #f472b6;
+      --ok: #34d399;
+      --hot: #fbbf24;
+      --grad: linear-gradient(100deg, var(--c1), var(--c2) 50%, var(--c3));
+      --line: rgba(255, 255, 255, 0.09);
+      --panel: rgba(255, 255, 255, 0.035);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg0);
+      color: var(--txt);
+      font-family: "Inter", system-ui, sans-serif;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+    /* Ambient aurora — cheaper than the full site's system */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(60vw 60vw at 20% 30%, rgba(56, 189, 248, 0.14), transparent 60%),
+        radial-gradient(50vw 50vw at 80% 70%, rgba(244, 114, 182, 0.14), transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      content: "";
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 75%);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(680px, calc(100% - 40px));
+      text-align: center;
+      padding: 32px;
+    }
+
+    .glitch {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(120px, 22vw, 220px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      background: var(--grad);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 0 0 8px;
+      position: relative;
+      animation: gradShift 6s ease-in-out infinite;
+    }
+    @keyframes gradShift {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
+    }
+    .glitch::before, .glitch::after {
+      content: "404";
+      position: absolute; inset: 0;
+      background: inherit;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0.5;
+    }
+    .glitch::before {
+      animation: glitchA 3s infinite steps(1);
+      mix-blend-mode: screen;
+    }
+    .glitch::after {
+      animation: glitchB 3.4s infinite steps(1);
+      mix-blend-mode: screen;
+    }
+    @keyframes glitchA {
+      0%, 92%, 100% { transform: none; }
+      93% { transform: translate(-3px, 1px); }
+      96% { transform: translate(2px, -2px); }
+    }
+    @keyframes glitchB {
+      0%, 88%, 100% { transform: none; }
+      89% { transform: translate(2px, 2px); }
+      93% { transform: translate(-2px, -1px); }
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      padding: 7px 16px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      background: var(--panel);
+      margin-bottom: 22px;
+    }
+    .status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #f87171;
+      animation: pulse 1.6s infinite;
+    }
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.55); }
+      70%  { box-shadow: 0 0 0 9px rgba(248, 113, 113, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+    }
+
+    h1 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(24px, 4vw, 34px);
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+    p.lede { color: var(--muted); font-size: 16px; max-width: 46ch; margin: 0 auto 28px; }
+
+    .terminal {
+      max-width: 520px;
+      margin: 0 auto 30px;
+      padding: 18px 22px;
+      text-align: left;
+      background: rgba(6, 9, 18, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    .terminal .p { color: var(--ok); }
+    .terminal .cmd { color: var(--txt); }
+    .terminal .err { color: #f87171; }
+    .terminal .hint { color: var(--dim); }
+    .terminal .caret {
+      color: var(--c1);
+      animation: blink 1s steps(2) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 11px;
+      font-weight: 600;
+      font-size: 14.5px;
+      text-decoration: none;
+      color: var(--txt);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      transition: transform .25s cubic-bezier(.22,.8,.26,.99), border-color .25s;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(129, 140, 248, 0.5); }
+    .btn-primary {
+      background: var(--grad);
+      background-size: 160% 100%;
+      border: 0;
+      color: #fff;
+      box-shadow: 0 8px 28px rgba(99, 102, 241, 0.35);
+    }
+    .btn-primary:hover { background-position: 100% 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="status mono"><span class="status-dot"></span> 404 · path not found</p>
+
+    <div class="glitch" aria-hidden="true">404</div>
+    <h1 aria-live="polite">this route wasn't in the router table.</h1>
+    <p class="lede">
+      The URL looked promising, but nothing here resolves to it. Not your fault, not mine —
+      or, well, maybe mine. Either way, here's a way home.
+    </p>
+
+    <div class="terminal" role="log" aria-label="Not found trace">
+      <div><span class="p">guest@jihad.dev:~$</span> <span class="cmd">curl <span id="path">/portfolio/…</span></span></div>
+      <div><span class="err">HTTP/1.1 404 Not Found</span></div>
+      <div><span class="hint">// no matching route</span></div>
+      <div><span class="p">guest@jihad.dev:~$</span> <span class="cmd">cd /</span><span class="caret">▊</span></div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="./">← Back home</a>
+      <a class="btn" href="resume.html">Open résumé</a>
+      <a class="btn" href="https://github.com/jihadabuzuhri" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </main>
+
+  <script>
+    // Show the URL the user actually tried to load
+    document.getElementById("path").textContent = location.pathname + location.search;
+  </script>
+</body>
+</html>

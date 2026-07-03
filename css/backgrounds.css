@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════════════════════════
+   Backgrounds — noise film grain, aurora blobs, grid mask
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Film-grain noise overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-aurora {
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  min-width: 480px;
+  min-height: 480px;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.16;
+  will-change: transform;
+}
+.a1 { top: -18%; left: -12%; background: radial-gradient(circle, var(--c1), transparent 65%); animation: drift1 26s ease-in-out infinite alternate; }
+.a2 { top: 25%; right: -20%; background: radial-gradient(circle, var(--c2), transparent 65%); animation: drift2 32s ease-in-out infinite alternate; }
+.a3 { bottom: -25%; left: 22%; background: radial-gradient(circle, var(--c3), transparent 65%); opacity: 0.1; animation: drift1 38s ease-in-out infinite alternate-reverse; }
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* Content layer sits above backgrounds */
+main, .footer { position: relative; z-index: 2; }

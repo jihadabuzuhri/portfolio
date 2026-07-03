@@ -29,6 +29,7 @@
   .about-card  { position: static; }
 
   .projects-grid { grid-template-columns: 1fr; }
+  .articles-grid { grid-template-columns: 1fr; }
   .edu-grid      { grid-template-columns: 1fr; }
 
   .section  { padding: 84px 0 64px; }

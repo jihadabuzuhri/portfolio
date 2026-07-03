@@ -51,6 +51,7 @@ const BUILTINS = {
         '  <span class="t-cmd">skills</span>       the toolbox',
         '  <span class="t-cmd">experience</span>   career log',
         '  <span class="t-cmd">projects</span>     things built',
+        '  <span class="t-cmd">writing</span>      articles & posts',
         '  <span class="t-cmd">awards</span>       trophy shelf',
         '  <span class="t-cmd">contact</span>      reach out',
         '  <span class="t-cmd">resume</span>       open the résumé',
@@ -81,12 +82,16 @@ const BUILTINS = {
     tPrint(
       '<span class="t-hot">🏆 IEEE Pioneer</span>\n<span class="t-hot">🏆 Doc-Tech</span>\n<span class="t-hot">🏆 GIC</span>\n<span class="t-hot">🏆 IEEE Region 8 Entrepreneurship</span>\n<span class="t-hot">🎓 3.9/4.0 GPA — top of class</span>'
     ),
+  writing: () =>
+    tPrint(
+      '<span class="t-sky">jun 2026</span>  <a href="https://dev.to/jihadabuzuhri/refactoring-in-the-ai-era-code-smells-software-engineers-should-still-know-2ino" target="_blank" rel="noopener">Refactoring in the AI Era — Code Smells Software Engineers Should Still Know</a>  <span class="t-dim">· 9 min</span>\n<span class="t-sky">dec 2024</span>  <a href="https://dev.to/jihadabuzuhri/understanding-rate-limiting-an-essential-guide-for-developers-2pa2" target="_blank" rel="noopener">Understanding Rate Limiting — An Essential Guide for Developers</a>  <span class="t-dim">· 5 min</span>\n\n<span class="t-dim">full archive →</span> <a href="https://dev.to/jihadabuzuhri" target="_blank" rel="noopener">dev.to/jihadabuzuhri</a>'
+    ),
   contact: () =>
     tPrint(
       'email     <a href="mailto:jihadabuzuhri@gmail.com">jihadabuzuhri@gmail.com</a>\nlinkedin  <a href="https://www.linkedin.com/in/jihadabuzuhri/" target="_blank" rel="noopener">/in/jihadabuzuhri</a>\ngithub    <a href="https://github.com/jihadabuzuhri" target="_blank" rel="noopener">@jihadabuzuhri</a>'
     ),
   resume: () => { tPrint('<span class="t-ok">opening resume.html…</span>'); setTimeout(() => (window.location.href = "resume.html"), 400); },
-  ls:     () => tPrint('<span class="t-sky">about/  experience/  projects/  skills/  education/  contact/</span>  <span class="t-cmd">profile.json</span>'),
+  ls:     () => tPrint('<span class="t-sky">about/  experience/  projects/  writing/  skills/  education/  contact/</span>  <span class="t-cmd">profile.json</span>'),
   date:   () => tPrint(new Date().toString()),
   matrix: () => { closeTerm(); startMatrix(); },
   clear:  () => (termBody.innerHTML = ""),
@@ -116,7 +121,7 @@ const runCmd = (raw) => {
       break;
     case "cd": {
       const target = arg.replace(/\/$/, "");
-      const valid = ["about", "experience", "projects", "skills", "education", "contact", "top"];
+      const valid = ["about", "experience", "projects", "writing", "skills", "education", "contact", "top"];
       if (valid.includes(target)) {
         tPrint(`<span class="t-ok">→ navigating to /${target}</span>`);
         closeTerm();

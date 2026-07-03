@@ -19,6 +19,10 @@ no public API to break.
   maintenance surface.
 
 ### Added
+- **`/writing` section** on the main page — dev.to articles surfaced as cards
+  with title, excerpt, publish date, read time, tag row and a "Read on dev.to"
+  CTA. Nav link, mobile sheet entry, command palette shortcut, and terminal
+  `writing` command all wired to match.
 - Custom `404.html` with glitch animation and terminal trace.
 - `robots.txt` and `sitemap.xml` for search-engine friendliness.
 - `.editorconfig` to keep formatting consistent across editors.
